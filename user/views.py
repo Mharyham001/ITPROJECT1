@@ -7,12 +7,20 @@ from .forms import CreateUserForm
 
 def register(request):
     if request.method == 'POST':
+<<<<<<< HEAD
+       form =  CreateUserForm(request.POST)
+=======
        form = CreateUserForm(request.POST)
+>>>>>>> 03eb2df070ad671ff4df716b591dc6de1ebd9fde
        if form.is_valid():
            form.save()
            return redirect('user-login')
     else:
+<<<<<<< HEAD
+        form =  CreateUserForm()
+=======
         form = CreateUserForm()
+>>>>>>> 03eb2df070ad671ff4df716b591dc6de1ebd9fde
     context = {
         'form': form,
     }
