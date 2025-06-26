@@ -30,9 +30,8 @@ urlpatterns = [
 <<<<<<< HEAD
     path('profile/', user_views.profile, name='user-profile'),
     path('', auth_views.LoginView.as_view(template_name='user/login.html'), name='user-login'),
-=======
-<<<<<<< HEAD
->>>>>>> 3acd01a23e7a503a705bb908a506be5ebb99480b
+
+
     path('login/', auth_views.LoginView.as_view(template_name='user/login.html') 
          , name='user-login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='user/logout.html'), 
