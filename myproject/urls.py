@@ -33,11 +33,8 @@ urlpatterns = [
          , name='user-login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='user/logout.html'), 
          name='user-logout'),
-<<<<<<< HEAD
-=======
 =======
     path('login/', auth_views.LoginView.as_view(template_name='user/login.html'), name='user-login'),
->>>>>>> bd89349bd85c6fe76f43fba37341d25d12978a37
     path('logout/', auth_views.LogoutView.as_view(template_name='user/logout.html'), name='user-logout'),
 >>>>>>> 03eb2df070ad671ff4df716b591dc6de1ebd9fde
 >>>>>>> 3acd01a23e7a503a705bb908a506be5ebb99480b
