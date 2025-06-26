@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dashboard.urls')),
     path('register/', user_views.register, name='user-register'),
+]
 
 =======
 <<<<<<< HEAD
