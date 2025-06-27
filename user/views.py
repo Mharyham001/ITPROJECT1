@@ -12,11 +12,7 @@ def register(request):
            form.save()
            return redirect('user-login')
     else:
-<<<<<<< HEAD
-        form =  CreateUserForm()
-=======
         form = CreateUserForm()
->>>>>>> 03eb2df070ad671ff4df716b591dc6de1ebd9fde
     context = {
         'form': form,
     }
