@@ -17,7 +17,10 @@ def staff(request):
 def product(request):
      items = product.object.all()
   
-    
+     if request.method == 'POST':
+          # Handle form submission for adding a new product
+          # Assuming you have a form to handle product creation
+          pass
      context ={
           'items': items,
      }
