@@ -16,8 +16,8 @@ def staff(request):
 @login_required(login_url='user-login')
 def product(request):
      items = product.object.all()
-
-
+  
+    
      context ={
           'items': items,
      }
