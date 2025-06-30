@@ -30,6 +30,8 @@ def product(request):
      }
      return render(request, 'dashboard/product.html', context)
 
+def product_
+
 @login_required(login_url='user-login')
 def order(request):
      return render(request, 'dashboard/order.html')
