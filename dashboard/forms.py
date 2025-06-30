@@ -5,5 +5,5 @@ from .models import Product,
 class OrderForm(forms.ModelForm):
 
     class Meta:
-        model = 
-        fields = ['name', 'order_quantity']
+        model = Product
+        fields = ['name', 'category', 'quantity']
