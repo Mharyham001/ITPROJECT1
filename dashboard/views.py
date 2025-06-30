@@ -19,6 +19,9 @@ def product(request):
   
      if request.method == 'POST':
           form = ProductForm(request.POST)
+          if form.is_valid():
+               form.save()
+               return redirect('dashboard-product')
      else:
           form = ProductForm()
      context ={
