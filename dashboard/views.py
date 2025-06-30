@@ -19,7 +19,8 @@ def product(request):
   
      if request.method == 'POST':
           form = ProductForm(request.POST)
-          
+     else:
+          form = ProductForm()
      context ={
           'items': items,
      }
