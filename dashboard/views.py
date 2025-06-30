@@ -30,7 +30,7 @@ def product(request):
      }
      return render(request, 'dashboard/product.html', context)
 
-def product_
+def product_delete(request):
 
 @login_required(login_url='user-login')
 def order(request):
