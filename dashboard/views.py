@@ -30,7 +30,7 @@ def product(request):
      }
      return render(request, 'dashboard/product.html', context)
 
-def product_delete(request):
+def product_delete(request, pk):
      return render(request, 'dashboard/product_delete.html')
 
 
