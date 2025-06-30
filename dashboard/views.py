@@ -31,6 +31,7 @@ def product(request):
      return render(request, 'dashboard/product.html', context)
 
 def product_delete(request, pk):
+     item = Product.objects.get(id=pk)
      return render(request, 'dashboard/product_delete.html')
 
 
