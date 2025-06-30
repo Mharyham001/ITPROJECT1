@@ -16,7 +16,7 @@ def staff(request):
 @login_required(login_url='user-login')
 def product(request):
      #items = product.object.all()
-     items = product.object.raw('SELECT * FROM dashboard_product')# pyright: ignore[reportUndefinedVariable]
+
 
      context ={
           'items': items,
