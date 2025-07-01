@@ -1,11 +1,11 @@
- {% extends "partials/base.html" %}
- {% block title %}Staff Page{% endblock %}
 
-  {% block content %}
+{% extends 'partials/base.html' %}
+{% block title %}Staff Page {% endblock %}
 
-   {% include 'partials/topnav.html' %}
-   
-     <!--Table-->
+  {% block content %} 
+
+{% include 'partials/topnav.html' %}
+   <!--Table-->
     <div class="container">
         <div class="row my-4">
             <div class="col-md-4"></div>
@@ -13,36 +13,22 @@
                 <table class="table bg-white">
                     <thead class="bg-info">
                         <tr class="text-white">
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">phone number</th>
+                            <th scope="col"></th>
+                            <th scope="col">Namet</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone number</th>
                         </tr>
                     </thead>
                     <tbody>
+                       
+                        {% for worker in workers %}
                         <tr>
-                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
-                            <td>Tosin</td>
-                            <td>Ayorinde</td>
-                            <td>@tosin</td>
-                            <td>08027127737</td>
+                            <th scope="row"><a class="btn btn-info btn-sm" href="{% url 'dashboard-staff-detail' worker.id %}">View</a></th>
+                            <td>{{worker.username}}</td>
+                            <td>{{worker.email}}</td>
+                            <td>{{worker.profile.phone}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
-                            <td>Ola</td>
-                            <td>Ola</td>
-                            <td>@ola</td>
-                            <td>09012345678</td>
-                        </tr>
-                         <tr>
-                            <th scope="row"><a class="btn btn-info btn-sm" href="">View</a></th>
-                            <td>Mariam</td>
-                            <td>Taiwo</td>
-                            <td>@wandey</td>
-                            <td>09012763783</td>
-                        </tr>
-                        
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -50,6 +36,7 @@
 
     </div>
 
-
     <!--End Table-->
+    
     {% endblock %}
+  
