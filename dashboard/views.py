@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import product
@@ -15,9 +15,11 @@ def staff(request):
 
 @login_required(login_url='user-login')
 def product(request):
-     items = product.object.all()
+     #items = product.object.all()
+
+
      context ={
-          'items': items
+          'items': items,
      }
      return render(request, 'dashboard/product.html', context)
 
