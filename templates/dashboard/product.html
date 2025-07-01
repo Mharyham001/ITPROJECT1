@@ -1,13 +1,8 @@
 {% extends "partials/base.html" %}
 {% block title %}Product Page{% endblock %}
-<<<<<<< HEAD
-
+{% load crispy_forms_tags %}
 {% block content %}
 
-=======
-{% block content %}
-
->>>>>>> 9654802f352f96a2d64cd40f428950642c5acea8
 {% include 'partials/topnav.html' %}
 
       <!--Table-->
@@ -17,7 +12,9 @@
                 <div class="border bg-white p-3">
                     <h4>Add Products</h4>
                     <hr>
-                    <form action="">
+                    <form action="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Name</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
